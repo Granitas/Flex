@@ -68,7 +68,7 @@
     <div>
       <a href="{{ SITEURL }}">
         {% if SITELOGO %}
-        <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+        <img class="circle" src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% else %}
         <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% endif %}
@@ -96,6 +96,12 @@
         <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
       </ul>
+
+      {% if STACKOVERFLOW %}
+      <a href="http://stackoverflow.com/users/{{STACKOVERFLOW}}">
+        <img src="http://stackoverflow.com/users/flair/{{STACKOVERFLOW}}.png" width="208" height="58" alt="Stack Overflow Profile">
+      </a>
+      {% endif %}
     </div>
   </aside>
   <main>
